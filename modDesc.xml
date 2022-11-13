@@ -1,0 +1,92 @@
+<modDesc descVersion="71">
+	<author>Fetty42</author>
+	<version>1.0.0.0</version>
+	<title>
+        <en>AnimalFoodOverview</en>
+		<de>AnimalFoodOverview</de>
+    </title>
+    <description>
+        <de><![CDATA[AnimalFoodOverview]]></de>
+        <en><![CDATA[AnimalFoodOverview]]></en>
+    </description>
+	
+	<iconFilename>icon.dds</iconFilename>
+	<multiplayer supported="true" />
+	<extraSourceFiles>
+		<sourceFile filename="AnimalFoodOverview.lua" />
+	</extraSourceFiles>    
+	<actions>
+      	<action name="ShowAnimalFoodDlg" category="PLAYER VEHICLE" />
+  	</actions>	
+  	<inputBinding>
+      	<actionBinding action="ShowAnimalFoodDlg">
+        	<binding device="KB_MOUSE_DEFAULT" input="KEY_rctrl KEY_rshift KEY_f" />
+      	</actionBinding>
+  	</inputBinding>	
+	<l10n>
+		<text name="input_ShowAnimalFoodDlg">
+			<de>Übersicht der Tierfütterung anzeigen</de>
+			<en>Show Animal Food Overview</en>
+		</text>
+
+	<!-- Dlg -->
+        <text name="ui_animalFoodDlg_title">
+			<de>Übersicht der Tierfütterung</de>
+			<en>Animal Food Overview</en>
+		</text>		
+        <text name="ui_animalFoodDlg_header_FoodGroup">
+			<de>Futtergruppen</de>	
+			<en>Food Group</en>
+        </text>		
+        <text name="ui_animalFoodDlg_header_ProductionWeight">
+			<de>Prod.-Gew.</de>	
+			<en>Prod. Weight</en>
+        </text>		
+        <text name="ui_animalFoodDlg_header_EatWeight">
+			<de>Fress-Gew.</de>
+			<en>Eat Weight</en>
+        </text>		
+        <text name="ui_animalFoodDlg_header_FoodTypes">
+			<de>Futtersorten</de>
+			<en>Food Types</en>
+        </text>		
+        <text name="ui_animalFoodDlg_btnClose">
+			<de>Schließen</de>	
+			<en>Close</en>
+		</text>		
+        <text name="ui_animalFoodDlg_sidebar_title">
+			<de>Alle Futterarten</de>
+			<en>All Food Types</en>
+		</text>		
+	<!-- Text -->
+        <text name="txt_Parallel">
+			<de>parallel</de>
+			<en>parallel</en>
+        </text>		
+        <text name="txt_sequentiel">
+			<de>sequentiell</de>
+			<en>sequential</en>
+        </text>		
+        <text name="txt_horse">
+			<de>Pferd</de>
+			<en>Horse</en>
+        </text>		
+        <text name="txt_pig">
+			<de>Schwein</de>
+			<en>Pig</en>
+        </text>		
+        <text name="txt_cow">
+			<de>Kuh</de>
+			<en>Cow</en>
+        </text>		
+        <text name="txt_sheep">
+			<de>Schaf</de>
+			<en>Sheep</en>
+        </text>		
+        <text name="txt_chicken">
+			<de>Huhn</de>
+			<en>Chicken</en>
+        </text>		
+
+	</l10n>
+</modDesc>
