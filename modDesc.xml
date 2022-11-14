@@ -4,6 +4,7 @@
 	<title>
         <en>AnimalFoodOverview</en>
 		<de>AnimalFoodOverview</de>
+		<ru>Обзор кормов для животных</ru>
     </title>
     <description>
         <de><![CDATA[AnimalFoodOverview]]></de>
@@ -27,65 +28,80 @@
 		<text name="input_ShowAnimalFoodDlg">
 			<de>Übersicht der Tierfütterung anzeigen</de>
 			<en>Show Animal Food Overview</en>
+			<ru>Обзор кормов</ru>
 		</text>
 
 	<!-- Dlg -->
         <text name="ui_animalFoodDlg_title">
 			<de>Übersicht der Tierfütterung</de>
 			<en>Animal Food Overview</en>
+			<ru>Обзор кормов для животных</ru>
 		</text>		
         <text name="ui_animalFoodDlg_header_FoodGroup">
 			<de>Futtergruppen</de>	
 			<en>Food Group</en>
+			<ru>Группа кормов</ru>
         </text>		
         <text name="ui_animalFoodDlg_header_ProductionWeight">
 			<de>Prod.-Gew.</de>	
 			<en>Prod. Weight</en>
+			<ru>Удел. вес</ru>
         </text>		
         <text name="ui_animalFoodDlg_header_EatWeight">
 			<de>Fress-Gew.</de>
 			<en>Eat Weight</en>
+			<ru>Корм. вес</ru>
         </text>		
         <text name="ui_animalFoodDlg_header_FoodTypes">
 			<de>Futtersorten</de>
 			<en>Food Types</en>
+			<ru>Типы кормов</ru>
         </text>		
         <text name="ui_animalFoodDlg_btnClose">
 			<de>Schließen</de>	
 			<en>Close</en>
+			<ru>Закрыть</ru>
 		</text>		
         <text name="ui_animalFoodDlg_sidebar_title">
 			<de>Alle Futterarten</de>
 			<en>All Food Types</en>
+			<ru>Все типы кормов</ru>
 		</text>		
 	<!-- Text -->
         <text name="txt_Parallel">
 			<de>parallel</de>
 			<en>parallel</en>
+			<ru>паралельный</ru>
         </text>		
         <text name="txt_sequentiel">
 			<de>sequentiell</de>
 			<en>sequential</en>
+			<ru>последовательный</ru>
         </text>		
         <text name="txt_horse">
 			<de>Pferd</de>
 			<en>Horse</en>
+			<ru>Лошади</ru>
         </text>		
         <text name="txt_pig">
 			<de>Schwein</de>
 			<en>Pig</en>
+			<ru>Свиньи</ru>
         </text>		
         <text name="txt_cow">
 			<de>Kuh</de>
 			<en>Cow</en>
+			<ru>Коровы</ru>
         </text>		
         <text name="txt_sheep">
 			<de>Schaf</de>
 			<en>Sheep</en>
+			<ru>Овцы</ru>
         </text>		
         <text name="txt_chicken">
 			<de>Huhn</de>
 			<en>Chicken</en>
+			<ru>Куры</ru>
         </text>		
 
 	</l10n>
