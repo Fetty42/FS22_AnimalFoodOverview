@@ -1,16 +1,22 @@
-<modDesc descVersion="71">
+<modDesc descVersion="72">
 	<author>Fetty42</author>
 	<version>1.0.0.0</version>
 	<title>
         <en>AnimalFoodOverview</en>
-		<de>AnimalFoodOverview</de>
     </title>
     <description>
-        <de><![CDATA[AnimalFoodOverview]]></de>
-        <en><![CDATA[AnimalFoodOverview]]></en>
+        <de><![CDATA[Spätestens mit MaizePlus ist es nicht mehr so ganz einfach zu wissen, welche Futterarten in den jeweiligen Futtergruppen enthalten sind. 
+Mit diesem MOD kann man sich pro Tierart die jeweiligen Futtergruppen und die darin enthaltenen Futterarten anzeigen lassen.
+
+Für Fehlermeldungen oder Anregungen besucht bitte: https://github.com/Fetty42/FS22_AnimalFoodOverview]]></de>
+		<en><![CDATA[With MaizePlus at the latest, it is no longer so easy to know which food types are contained in the respective food groups. 
+With this MOD you can display the respective food groups and the food types contained in them per animal species.
+
+For error messages or suggestions please visit: https://github.com/Fetty42/FS22_AnimalFoodOverview]]></en>
+
     </description>
 	
-	<iconFilename>icon.dds</iconFilename>
+	<iconFilename>modIcon.dds</iconFilename>
 	<multiplayer supported="true" />
 	<extraSourceFiles>
 		<sourceFile filename="AnimalFoodOverview.lua" />
