@@ -3,7 +3,7 @@
 -- Version: 1.1.0.0
 
 
-local dbPrintfOn = true
+local dbPrintfOn = false
 
 local function dbPrintf(...)
 	if dbPrintfOn then
