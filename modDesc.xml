@@ -1,6 +1,6 @@
 <modDesc descVersion="72">
 	<author>Fetty42</author>
-	<version>1.0.0.0</version>
+	<version>1.1.0.0</version>
 	<title>
         <en>AnimalFoodOverview</en>
 		<de>Tierfutter Übersicht</de>
@@ -9,9 +9,19 @@
         <de><![CDATA[Spätestens mit MaizePlus ist es nicht mehr so ganz einfach zu wissen, welche Futterarten in den jeweiligen Futtergruppen enthalten sind. 
 Mit diesem MOD kann man sich pro Tierart die jeweiligen Futtergruppen und die darin enthaltenen Futterarten anzeigen lassen.
 
+Update 1.1.0.0
+- Separater Dialog für die Anzeige aller Mixtur-Rezepte
+- Futterarten Anzeige um die jeweiligen Mixturen ergänzt
+
+
+
 Für Fehlermeldungen oder Anregungen besucht bitte: https://github.com/Fetty42/FS22_AnimalFoodOverview]]></de>
 		<en><![CDATA[With MaizePlus at the latest, it is no longer so easy to know which food types are contained in the respective food groups. 
 With this MOD you can display the respective food groups and the food types contained in them per animal species.
+
+Update 1.1.0.0
+- Separate dialog for the display of all mixture recipes
+- Food types display supplemented by the respective mixtures
 
 For error messages or suggestions please visit: https://github.com/Fetty42/FS22_AnimalFoodOverview]]></en>
     </description>
@@ -67,11 +77,42 @@ For error messages or suggestions please visit: https://github.com/Fetty42/FS22_
 			<en>Close</en>
 			<ru>Закрыть</ru>
 		</text>		
+        <text name="ui_animalFoodDlg_btnMix">
+			<de>Mixtur-Rezepte anzeigen</de>	
+			<en>Show Mixture Recipes</en>
+			<ru>Показать рецепты смесей</ru>
+		</text>		
         <text name="ui_animalFoodDlg_sidebar_title">
 			<de>Alle Futterarten</de>
 			<en>All Food Types</en>
 			<ru>Все типы кормов</ru>
 		</text>		
+	<!-- Dlg mixtures-->
+        <text name="ui_mixturesDlg_title">
+			<de>Übersicht der Mixtur-Rezepte</de>
+			<en>Mixture Recipes Overview</en>
+			<ru>Обзор рецептов смесей</ru>
+		</text>		
+        <text name="ui_mixturesDlg_header_IngredientTitle">
+			<de>Bestandteil</de>
+			<en>Ingredient</en>
+			<ru>Компонент</ru>
+        </text>		
+        <text name="ui_mixturesDlg_header_Min">
+			<de>Min.</de>
+			<en>Min.</en>
+			<ru>Мин.</ru>
+        </text>		
+        <text name="ui_mixturesDlg_header_Max">
+			<de>Max.</de>
+			<en>Max.</en>
+			<ru>Макс.</ru>
+        </text>		
+        <text name="ui_mixturesDlg_header_FillTypeTitles">
+			<de>Mögliche Futterarten</de>
+			<en>Possible forage types</en>
+			<ru>Возможные типы кормов</ru>
+        </text>		
 	<!-- Text -->
         <text name="txt_Parallel">
 			<de>parallel</de>

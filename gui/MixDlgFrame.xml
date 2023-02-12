@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<GUI onOpen="onOpen" onClose="onClose" onCreate="onCreate">
+    <GuiElement type="empty" profile="newLayer" />
+    <GuiElement type="bitmap" profile="dialogFullscreenBg" />
+    <GuiElement type="bitmap" profile="bgVignette"/>
+    <GuiElement type="bitmap" profile="bgGlowDialog" />
+    <GuiElement type="bitmap" profile="dialogBg" id="dialogElement" size="1000px 650px" imageColor="0.118 0.116 0.115 0.50">        
+        <GuiElement type="text" profile="dialogTitle" text="$l10n_ui_mixturesDlg_title" id="dialogTitleElement" position="0px -30px" />
+    
+        <!-- Main list -->
+        <GuiElement type="bitmap" profile="ingameMenuHeaderBox" id="tableHeaderBox" position="50px 500px" size="900px 50px" imageColor="$preset_colorBlack2">
+            <GuiElement type="text" profile="ingameMenuHeaderCellRight" position="20px -0px" size="50px 40.77px" text="$l10n_ui_mixturesDlg_header_Min"/>
+            <GuiElement type="text" profile="ingameMenuHeaderCellRight" position="80px -0px" size="50px 40.77px" text="$l10n_ui_mixturesDlg_header_Max"/>
+            <GuiElement type="text" profile="ingameMenuHeaderCellLeft" position="150px -0px" size="450px 40.77px" text="$l10n_ui_mixturesDlg_header_FillTypeTitles"/>
+        </GuiElement>
+
+        <GuiElement type="smoothList" profile="ingameMenuContractsList" id="mixtureRecipesTable" listSectionHeader="section" position="50px -150px" size="900px 450px" focusInit="onOpen" focusChangeTop="nil" focusChangeBottom="nil">
+            <GuiElement type="listItem" profile="ingameMenuContractsListItem" name="orderRowTemplate" size="900px 40.77px">
+                <GuiElement type="bitmap" profile="emptyPanel">
+                    <GuiElement type="text" profile="ingameMenuRowCellRight" position="30px 0px" size="40px 40.77px" name="Min" textAlignment="right"/>
+                    <GuiElement type="text" profile="ingameMenuRowCellRight" position="90px 0px" size="40px 40.77px" name="Max" textAlignment="right"/>
+                    <GuiElement type="bitmap" profile="ingameMenuFillTypeImage" position="140px 5px" name="FillTypeIcon" />
+                    <GuiElement type="text" profile="ingameMenuRowCellLeft" position="175px 0px" size="750px 40.77px" name="FillTypeTitles"/>
+                </GuiElement>
+            </GuiElement>
+            <GuiElement type="listItem" profile="ingameMenuContractsListCategory" name="section">
+                <GuiElement type="text" profile="ingameMenuContractsListCategoryTitle" name="title" textSize="18px"/>
+            </GuiElement>
+        </GuiElement>
+        <GuiElement type="threePartBitmap" profile="verticalListSliderRightDocked" position="-25px -150px" size="12px 450px">
+            <GuiElement type="slider" profile="verticalListSliderBar" size="6px 442px" dataElementId="mixtureRecipesTable" id="tableSlider"/>
+        </GuiElement>  
+
+        <!-- Buttons -->
+        <GuiElement type="flowLayout" profile="buttonBoxDialog">
+            <GuiElement type="button" profile="buttonBack" text="$l10n_ui_animalFoodDlg_btnClose" onClick="onClickClose" />
+        </GuiElement>
+    </GuiElement>
+</GUI>

@@ -1,6 +1,6 @@
 -- Author: Fetty42
--- Date: 01.11.2022
--- Version: 1.2.0.0
+-- Date: 12.02.2023
+-- Version: 1.1.0.0
 
 local dbPrintfOn = false
 local dbInfoPrintfOn = true
@@ -77,10 +77,13 @@ function AnimalFoodOverview:ShowAnimalFoodDlg(actionName, keyStatus, arg3, arg4,
 	g_gui:loadGui(AnimalFoodOverview.dir .. "gui/DlgFrame.xml", "DlgFrame", dlgFrame)
 	AnimalFoodOverview.dlg = g_gui:showDialog("DlgFrame")
 
-	-- if AnimalFoodOverview.dlg ~= nil then
-	-- 	AnimalFoodOverview.dlg.target:setVIPOrders()
-    -- end
+	-- print("")
+	-- print("** Start DebugUtil.printTableRecursively() ************************************************************")
+	-- printf("==> %s", "g_currentMission.animalFoodSystem.animalMixtures")
+	-- DebugUtil.printTableRecursively(g_currentMission.animalFoodSystem.animalMixtures, ".", 0, 4)
+	-- print("** End DebugUtil.printTableRecursively() **************************************************************")
 end
+
 
 function AnimalFoodOverview:onLoad(savegame)end;
 function AnimalFoodOverview:onUpdate(dt)end;

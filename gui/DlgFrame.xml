@@ -6,55 +6,56 @@
     <GuiElement type="bitmap" profile="bgGlowDialog" />
     <!-- <GuiElement type="bitmap" profile="orderFrame" id="dialogElement">         -->
     
-    <GuiElement type="bitmap" profile="dialogBg" id="dialogElement" size="1350px 800px" imageColor="0.118 0.116 0.115 0.20">        
+    <GuiElement type="bitmap" profile="dialogBg" id="dialogElement" size="1450px 850px" imageColor="0.118 0.116 0.115 0.20">        
         <GuiElement type="text" profile="dialogTitle" text="$l10n_ui_animalFoodDlg_title" id="dialogTitleElement" position="0px -30px" />
     
         <!-- Main list -->
-        <GuiElement type="bitmap" profile="ingameMenuHeaderBox" id="tableHeaderBox" position="50px 650px" size="900px 50px" imageColor="$preset_colorBlack2">
+        <GuiElement type="bitmap" profile="ingameMenuHeaderBox" id="tableHeaderBox" position="50px 700px" size="900px 50px" imageColor="$preset_colorBlack2">
             <GuiElement type="text" profile="ingameMenuHeaderCellLeft" position="30px -0px" size="240px 40.77px" text="$l10n_ui_animalFoodDlg_header_FoodGroup"/>
-            <GuiElement type="text" profile="ingameMenuHeaderCellRight" position="250px -0px" size="150px 40.77px" text="$l10n_ui_animalFoodDlg_header_ProductionWeight"/>
-            <GuiElement type="text" profile="ingameMenuHeaderCellRight" position="400px -0px" size="120px 40.77px" text="$l10n_ui_animalFoodDlg_header_EatWeight"/>
-            <GuiElement type="text" profile="ingameMenuHeaderCellLeft" position="540px -0px" size="350px 40.77px" text="$l10n_ui_animalFoodDlg_header_FoodTypes"/>
+            <GuiElement type="text" profile="ingameMenuHeaderCellRight" position="200px -0px" size="150px 40.77px" text="$l10n_ui_animalFoodDlg_header_ProductionWeight"/>
+            <GuiElement type="text" profile="ingameMenuHeaderCellRight" position="350px -0px" size="120px 40.77px" text="$l10n_ui_animalFoodDlg_header_EatWeight"/>
+            <GuiElement type="text" profile="ingameMenuHeaderCellLeft" position="490px -0px" size="350px 40.77px" text="$l10n_ui_animalFoodDlg_header_FoodTypes"/>
         </GuiElement>
 
-        <GuiElement type="smoothList" profile="ingameMenuContractsList" id="overviewTable" focusInit="onOpen" focusChangeTop="nil" focusChangeBottom="nil" listSectionHeader="section" position="50px -150px" size="900px 600px">
+        <GuiElement type="smoothList" profile="ingameMenuContractsList" id="overviewTable" focusInit="onOpen" focusChangeTop="nil" focusChangeBottom="nil" listSectionHeader="section" position="50px -150px" size="900px 650px">
             <GuiElement type="listItem" profile="ingameMenuContractsListItem" name="orderRowTemplate" size="900px 40.77px">
                 <GuiElement type="bitmap" profile="emptyPanel">
                     <GuiElement type="text" profile="ingameMenuRowCellLeft" position="40px 0px" size="240px 40.77px" name="FoodGroup" />
-                    <GuiElement type="text" profile="ingameMenuRowCellRight" position="250px 0px" size="150px 40.77px" name="ProductionWeight" textAlignment="right"/>
-                    <GuiElement type="text" profile="ingameMenuRowCellRight" position="400px 0px" size="120px 40.77px" name="EatWeight" textAlignment="right"/>
-                    <GuiElement type="text" profile="ingameMenuRowCellLeft" position="540px 0px" size="350px 40.77px" name="FoodTypes"/>
+                    <GuiElement type="text" profile="ingameMenuRowCellRight" position="200px 0px" size="150px 40.77px" name="ProductionWeight" textAlignment="right"/>
+                    <GuiElement type="text" profile="ingameMenuRowCellRight" position="350px 0px" size="120px 40.77px" name="EatWeight" textAlignment="right"/>
+                    <GuiElement type="text" profile="ingameMenuRowCellLeft" position="490px 0px" size="350px 40.77px" name="FoodTypes"/>
                 </GuiElement>
             </GuiElement>
             <GuiElement type="listItem" profile="ingameMenuContractsListCategory" name="section">
                 <GuiElement type="text" profile="ingameMenuContractsListCategoryTitle" name="title" textSize="18px"/>
             </GuiElement>
         </GuiElement>
-        <GuiElement type="threePartBitmap" profile="verticalListSliderRightDocked" position="-375px -150px" size="12px 600px">
-            <GuiElement type="slider" profile="verticalListSliderBar" size="6px 592px" dataElementId="overviewTable" id="tableSlider"/>
+        <GuiElement type="threePartBitmap" profile="verticalListSliderRightDocked" position="-475px -150px" size="12px 650px">
+            <GuiElement type="slider" profile="verticalListSliderBar" size="6px 642px" dataElementId="overviewTable" id="tableSlider"/>
         </GuiElement>  
 
         <!-- Detail list -->
-        <GuiElement type="text" profile="dialogTitle" text="$l10n_ui_animalFoodDlg_sidebar_title" position="470px -170px" textSize="22px"/>
-        <GuiElement type="bitmap" profile="ingameMenuHeaderBox" id="tableHeaderBox" position="1000px 550px" size="300px 50px" imageColor="$preset_colorBlack2">
-            <GuiElement type="text" profile="ingameMenuHeaderCellLeft" id="detailHeader" position="30px -0px" size="300px 50.77px" text="Alle Futterarten"/>
+        <GuiElement type="text" profile="dialogTitle" text="$l10n_ui_animalFoodDlg_sidebar_title" position="470px -110px" textSize="22px"/>
+        <GuiElement type="bitmap" profile="ingameMenuHeaderBox" id="tableHeaderBox" position="1000px 660px" size="400px 50px" imageColor="$preset_colorBlack2">
+            <GuiElement type="text" profile="ingameMenuHeaderCellLeft" id="detailHeader" position="30px -0px" size="400px 50.77px" text="Alle Futterarten"/>
         </GuiElement>
 
-        <GuiElement type="smoothList" profile="ingameMenuContractsList" id="overviewTableDetail" handleFocus="false" selectedWithoutFocus="false" position="1000px -250px" size="300px 500px">
-            <GuiElement type="listItem" profile="ingameMenuContractsListItem" name="orderRowTemplate" size="200px 40.77px">
+        <GuiElement type="smoothList" profile="ingameMenuContractsList" id="overviewTableDetail" handleFocus="false" selectedWithoutFocus="false" position="1000px -190px" size="400px 550px">
+            <GuiElement type="listItem" profile="ingameMenuContractsListItem" name="orderRowTemplate" size="300px 40.77px">
                 <GuiElement type="bitmap" profile="emptyPanel">
                     <GuiElement type="bitmap" profile="ingameMenuFillTypeImage" name="fillTypeIcon" />
-                    <GuiElement type="text" profile="ingameMenuRowCellLeft" position="55px 0px" size="300px 40.77px" name="FoodType" />
+                    <GuiElement type="text" profile="ingameMenuRowCellLeft" position="55px 0px" size="350px 40.77px" name="FoodType" />
                 </GuiElement>
             </GuiElement>
         </GuiElement>
-        <GuiElement type="threePartBitmap" profile="verticalListSliderRightDocked" position="-20px -150px" size="12px 600px">
-            <GuiElement type="slider" profile="verticalListSliderBar" size="6px 592px" dataElementId="overviewTableDetail" id="tableSliderDetail"/>
+        <GuiElement type="threePartBitmap" profile="verticalListSliderRightDocked" position="-25px -190px" size="12px 550px">
+            <GuiElement type="slider" profile="verticalListSliderBar" size="6px 542px" dataElementId="overviewTableDetail" id="tableSliderDetail"/>
         </GuiElement>  
 
         <!-- Buttons -->
         <GuiElement type="flowLayout" profile="buttonBoxDialog">
             <GuiElement type="button" profile="buttonBack" text="$l10n_ui_animalFoodDlg_btnClose" onClick="onClickBack" />
+            <GuiElement type="button" profile="buttonExtra1" text="$l10n_ui_animalFoodDlg_btnMix" onClick="onClickShowMixtureRecipes" />
         </GuiElement>
     </GuiElement>
 </GUI>
