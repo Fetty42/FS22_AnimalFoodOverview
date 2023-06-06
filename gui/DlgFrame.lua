@@ -91,6 +91,22 @@ function DlgFrame:onOpen()
 	for _, animalFood in pairs(g_currentMission.animalFoodSystem.animalFood) do
 		
 		local animalName = animalNames[animalFood.animalTypeIndex]
+		
+		-- fix for other animals to not show nil in the dialog. Use either the filltype name which belongs to it or the type name itself
+		if animalName == nil then
+			local animalType = g_currentMission.animalSystem:getTypeByIndex(animalFood.animalTypeIndex)
+			
+			if animalType.name ~= nil then
+				local fillType = g_fillTypeManager:getFillTypeByName(animalType.name)
+				if fillType ~= nil then
+					animalNames[animalFood.animalTypeIndex] = fillType.title
+				else
+					animalNames[animalFood.animalTypeIndex] = animalType.name
+				end
+				animalName = animalNames[animalFood.animalTypeIndex];
+			end
+		end
+		
 		local sectionText = string.format("%s (%s)", animalName, (animalFood.consumptionType == 1) and g_i18n:getText("txt_sequentiel") or g_i18n:getText("txt_Parallel"))
 		local section = {animalName = animalName, sectionTitle = sectionText, items = {}}
 
