@@ -1,6 +1,6 @@
-<modDesc descVersion="72">
+<modDesc descVersion="79">
 	<author>Fetty42</author>
-	<version>1.1.0.0</version>
+	<version>1.1.2.0</version>
 	<title>
         <en>AnimalFoodOverview</en>
 		<de>Tierfutter Übersicht</de>
@@ -9,15 +9,27 @@
         <de><![CDATA[Spätestens mit MaizePlus ist es nicht mehr so ganz einfach zu wissen, welche Futterarten in den jeweiligen Futtergruppen enthalten sind. 
 Mit diesem MOD kann man sich pro Tierart die jeweiligen Futtergruppen und die darin enthaltenen Futterarten anzeigen lassen.
 
+Update 1.1.2.0
+- kleine Codekorrekturen
+
+Update 1.1.1.0
+- Korrektur der nicht sichtbaren Spaltenüberschriften
+- Fix für nicht standard Tiere, damit sie im Dialog nicht mehr mit "nil" angezeigt werden (thx Achimobil)
+
 Update 1.1.0.0
 - Separater Dialog für die Anzeige aller Mixtur-Rezepte
 - Futterarten Anzeige um die jeweiligen Mixturen ergänzt
 
-
-
 Für Fehlermeldungen oder Anregungen besucht bitte: https://github.com/Fetty42/FS22_AnimalFoodOverview]]></de>
 		<en><![CDATA[With MaizePlus at the latest, it is no longer so easy to know which food types are contained in the respective food groups. 
 With this MOD you can display the respective food groups and the food types contained in them per animal species.
+
+Update 1.1.2.0
+- small code corrections
+
+Update 1.1.1.0
+- Correction of the invisible column headers
+- fix for non-standard animals to not show "nil" in the dialog (thx Achimobil)
 
 Update 1.1.0.0
 - Separate dialog for the display of all mixture recipes

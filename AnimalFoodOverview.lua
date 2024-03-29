@@ -1,6 +1,6 @@
 -- Author: Fetty42
--- Date: 12.02.2023
--- Version: 1.1.0.0
+-- Date: 29.03.2024
+-- Version: 1.1.2.0
 
 local dbPrintfOn = false
 local dbInfoPrintfOn = true
@@ -46,7 +46,7 @@ function AnimalFoodOverview:loadMap(name)
 		-- g_messageCenter:subscribe(MessageType.HOUR_CHANGED, self.onHourChanged, self)
 		-- g_messageCenter:subscribe(MessageType.MINUTE_CHANGED, self.onMinuteChanged, self)
 	end
-end;
+end
 
 
 
@@ -64,7 +64,7 @@ function AnimalFoodOverview:registerActionEvents()
 			dbPrintf("Action event inserted successfully")
 		end
 	end
-end;
+end
 
 
 --

@@ -10,7 +10,7 @@
         <GuiElement type="text" profile="dialogTitle" text="$l10n_ui_animalFoodDlg_title" id="dialogTitleElement" position="0px -30px" />
     
         <!-- Main list -->
-        <GuiElement type="bitmap" profile="ingameMenuHeaderBox" id="tableHeaderBox" position="50px 700px" size="900px 50px" imageColor="$preset_colorBlack2">
+        <GuiElement type="bitmap" profile="ingameMenuHeaderBox" id="tableHeaderBox" position="50px -100px" size="900px 50px" imageColor="$preset_colorBlack2">
             <GuiElement type="text" profile="ingameMenuHeaderCellLeft" position="30px -0px" size="240px 40.77px" text="$l10n_ui_animalFoodDlg_header_FoodGroup"/>
             <GuiElement type="text" profile="ingameMenuHeaderCellRight" position="200px -0px" size="150px 40.77px" text="$l10n_ui_animalFoodDlg_header_ProductionWeight"/>
             <GuiElement type="text" profile="ingameMenuHeaderCellRight" position="350px -0px" size="120px 40.77px" text="$l10n_ui_animalFoodDlg_header_EatWeight"/>
@@ -36,11 +36,11 @@
 
         <!-- Detail list -->
         <GuiElement type="text" profile="dialogTitle" text="$l10n_ui_animalFoodDlg_sidebar_title" position="470px -110px" textSize="22px"/>
-        <GuiElement type="bitmap" profile="ingameMenuHeaderBox" id="tableHeaderBox" position="1000px 660px" size="400px 50px" imageColor="$preset_colorBlack2">
+        <GuiElement type="bitmap" profile="ingameMenuHeaderBox" id="tableHeaderBox" position="1000px -150px" size="400px 50px" imageColor="$preset_colorBlack2">
             <GuiElement type="text" profile="ingameMenuHeaderCellLeft" id="detailHeader" position="30px -0px" size="400px 50.77px" text="Alle Futterarten"/>
         </GuiElement>
 
-        <GuiElement type="smoothList" profile="ingameMenuContractsList" id="overviewTableDetail" handleFocus="false" selectedWithoutFocus="false" position="1000px -190px" size="400px 550px">
+        <GuiElement type="smoothList" profile="ingameMenuContractsList" id="overviewTableDetail" handleFocus="false" selectedWithoutFocus="false" position="1000px -200px" size="400px 550px">
             <GuiElement type="listItem" profile="ingameMenuContractsListItem" name="orderRowTemplate" size="300px 40.77px">
                 <GuiElement type="bitmap" profile="emptyPanel">
                     <GuiElement type="bitmap" profile="ingameMenuFillTypeImage" name="fillTypeIcon" />
@@ -48,7 +48,7 @@
                 </GuiElement>
             </GuiElement>
         </GuiElement>
-        <GuiElement type="threePartBitmap" profile="verticalListSliderRightDocked" position="-25px -190px" size="12px 550px">
+        <GuiElement type="threePartBitmap" profile="verticalListSliderRightDocked" position="-25px -200px" size="12px 550px">
             <GuiElement type="slider" profile="verticalListSliderBar" size="6px 542px" dataElementId="overviewTableDetail" id="tableSliderDetail"/>
         </GuiElement>  
 

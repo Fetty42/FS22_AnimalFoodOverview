@@ -198,7 +198,7 @@ function DlgFrame:getNumberOfItemsInSection(list, section)
 		local selectedSectionIndex = self.overviewTable.selectedSectionIndex
 		local selectedIndex = self.overviewTable.selectedIndex
 
-		foodGroupEntry = self.overviewTableData[selectedSectionIndex].items[selectedIndex]
+		local foodGroupEntry = self.overviewTableData[selectedSectionIndex].items[selectedIndex]
 		local detailHeaderTxt = string.format("%s - %s", self.overviewTableData[selectedSectionIndex].animalName, foodGroupEntry.groupTitle )
 		return #foodGroupEntry.fillTypes
 	end
@@ -227,7 +227,7 @@ function DlgFrame:populateCellForItemInSection(list, section, index, cell)
 		local selectedSectionIndex = self.overviewTable.selectedSectionIndex
 		local selectedIndex = self.overviewTable.selectedIndex
 
-		foodGroupEntry = self.overviewTableData[selectedSectionIndex].items[selectedIndex]
+		local foodGroupEntry = self.overviewTableData[selectedSectionIndex].items[selectedIndex]
 		local detailHeaderTxt = string.format("%s - %s", self.overviewTableData[selectedSectionIndex].animalName, foodGroupEntry.groupTitle )
 		
 		self.detailHeader:setText(detailHeaderTxt)

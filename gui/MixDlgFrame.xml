@@ -8,7 +8,7 @@
         <GuiElement type="text" profile="dialogTitle" text="$l10n_ui_mixturesDlg_title" id="dialogTitleElement" position="0px -30px" />
     
         <!-- Main list -->
-        <GuiElement type="bitmap" profile="ingameMenuHeaderBox" id="tableHeaderBox" position="50px 500px" size="900px 50px" imageColor="$preset_colorBlack2">
+        <GuiElement type="bitmap" profile="ingameMenuHeaderBox" id="tableHeaderBox" position="50px -100px" size="900px 50px" imageColor="$preset_colorBlack2">
             <GuiElement type="text" profile="ingameMenuHeaderCellRight" position="20px -0px" size="50px 40.77px" text="$l10n_ui_mixturesDlg_header_Min"/>
             <GuiElement type="text" profile="ingameMenuHeaderCellRight" position="80px -0px" size="50px 40.77px" text="$l10n_ui_mixturesDlg_header_Max"/>
             <GuiElement type="text" profile="ingameMenuHeaderCellLeft" position="150px -0px" size="450px 40.77px" text="$l10n_ui_mixturesDlg_header_FillTypeTitles"/>
