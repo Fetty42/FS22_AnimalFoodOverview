@@ -11,6 +11,7 @@ Mit diesem MOD kann man sich pro Tierart die jeweiligen Futtergruppen und die da
 
 Update 1.1.2.0
 - kleine Codekorrekturen
+- Problem behoben, dass in seltenen Fällen die Aktionsstasten nicht verfügbar waren
 
 Update 1.1.1.0
 - Korrektur der nicht sichtbaren Spaltenüberschriften
@@ -26,6 +27,7 @@ With this MOD you can display the respective food groups and the food types cont
 
 Update 1.1.2.0
 - small code corrections
+- Fixed the problem that in rare cases the action buttons were not available
 
 Update 1.1.1.0
 - Correction of the invisible column headers
@@ -44,7 +46,7 @@ For error messages or suggestions please visit: https://github.com/Fetty42/FS22_
 		<sourceFile filename="AnimalFoodOverview.lua" />
 	</extraSourceFiles>    
 	<actions>
-      	<action name="ShowAnimalFoodDlg" category="PLAYER VEHICLE" />
+      	<action name="ShowAnimalFoodDlg" category="SYSTEM" />
   	</actions>	
   	<inputBinding>
       	<actionBinding action="ShowAnimalFoodDlg">
