@@ -111,60 +111,8 @@ function DlgFrame:onOpen()
 		local section = {animalName = animalName, sectionTitle = sectionText, items = {}}
 
 		-- Collect allowed filltypes for each food group
-		for _, foodGroup in pairs(animalFood.groups) do
-			local item = {groupTitle=foodGroup.title, productionWeight=string.format("%.2f", foodGroup.productionWeight), eatWeight=string.format("%.2f", foodGroup.eatWeight), foodTypesLine="", fillTypes={}, fillTypesTitle={}}
-			local foodGroupFillTypes = {}	-- for a faster search at the mixtures
-			
-			-- direct fill types
-			for _, ftIndex in pairs(foodGroup.fillTypes) do
-				foodGroupFillTypes[ftIndex] = 1
-				local fillType = g_fillTypeManager:getFillTypeByIndex(ftIndex)
-				if string.sub(fillType.name, 1, -3) ~= "SLIDER" then
-					table.insert(item.fillTypes, fillType)
-					table.insert(item.fillTypesTitle, fillType.title)
-				end
-			end
-
-			-- mixture fill types
-			if g_currentMission.animalFoodSystem.animalMixtures[animalFood.animalTypeIndex] ~= nil then
-				local lastDirectFillTypePos = #item.fillTypes
-				for i, mixFtIndex in pairs(g_currentMission.animalFoodSystem.animalMixtures[animalFood.animalTypeIndex]) do
-					local mixFt = g_fillTypeManager:getFillTypeByIndex(mixFtIndex)
-					self.mixFillTypeIdxToAnimalTitle[mixFtIndex] = animalName
-					-- printf("MixFillType: Animal=%s Group=%s Mixture=%s", animalName, foodGroup.title, mixFt.title)
-					
-					local found = false
-					for _, ingredient in pairs(g_currentMission.animalFoodSystem.mixtureFillTypeIndexToMixture[mixFtIndex].ingredients) do
-						local weight = ingredient.weight
-						for _, ftIndex in pairs(ingredient.fillTypes) do
-							if foodGroupFillTypes[ftIndex] ~= nil and not found then
-								local mixFillTypeTitle = string.format("%s (%.0f%%)", mixFt.title, weight*100)
-								found = true
-
-								if string.find(mixFt.name, "FORAGE") ~= nil then
-									-- insert at end
-									table.insert(item.fillTypes, mixFt)
-									table.insert(item.fillTypesTitle, mixFillTypeTitle)
-								else
-									-- insert direct after direct fill types
-									table.insert(item.fillTypes, lastDirectFillTypePos+1, mixFt)
-									table.insert(item.fillTypesTitle, lastDirectFillTypePos+1, mixFillTypeTitle)
-								end
-							end
-						end
-					end
-				end
-			end
-
-			-- create foodTypesLine for overview table
-			local foodTypesLine = ""
-			for index, ftTitle in pairs(item.fillTypesTitle) do
-				if string.sub(ftTitle, 1, -3) ~= "SLIDER" then
-					item.foodTypesLine = item.foodTypesLine .. (item.foodTypesLine == "" and "" or ", ") .. ftTitle
-				end
-			end
-			table.insert(section.items, item)
-		end
+		DlgFrame:getFoodGroupsDataForAnimalTypeIndex(animalFood.animalTypeIndex, section.items, self.mixFillTypeIdxToAnimalTitle, animalName)
+        -- table.insert(section.items, foodGroupItems1)
 
 		table.insert(self.overviewTableData, section)
 	end
@@ -176,7 +124,69 @@ function DlgFrame:onOpen()
 	self:setSoundSuppressed(true)
     FocusManager:setFocus(self.overviewTable)
     self:setSoundSuppressed(false)
+end
 
+
+function DlgFrame:getFoodGroupsDataForAnimalTypeIndex(animalTypeIndex, foodGroupItemsRet, mixFillTypeIdxToAnimalTitle --[[Optional]], animalName --[[Optional]])
+	local animalFood =  g_currentMission.animalFoodSystem.animalTypeIndexToFood[animalTypeIndex]
+
+	-- Collect allowed filltypes for each food group
+	for _, foodGroup in pairs(animalFood.groups) do
+		local item = {groupTitle=foodGroup.title, productionWeight=string.format("%.2f", foodGroup.productionWeight), eatWeight=string.format("%.2f", foodGroup.eatWeight), foodTypesLine="", fillTypes={}, fillTypesTitle={}}
+		local foodGroupFillTypes = {}	-- for a faster search at the mixtures
+		
+		-- direct fill types
+		for _, ftIndex in pairs(foodGroup.fillTypes) do
+			foodGroupFillTypes[ftIndex] = 1
+			local fillType = g_fillTypeManager:getFillTypeByIndex(ftIndex)
+			if string.sub(fillType.name, 1, -3) ~= "SLIDER" then
+				table.insert(item.fillTypes, fillType)
+				table.insert(item.fillTypesTitle, fillType.title)
+			end
+		end
+
+		-- mixture fill types
+		if g_currentMission.animalFoodSystem.animalMixtures[animalTypeIndex] ~= nil then
+			local lastDirectFillTypePos = #item.fillTypes
+			for i, mixFtIndex in pairs(g_currentMission.animalFoodSystem.animalMixtures[animalTypeIndex]) do
+				local mixFt = g_fillTypeManager:getFillTypeByIndex(mixFtIndex)
+				if mixFillTypeIdxToAnimalTitle ~= nil then
+					mixFillTypeIdxToAnimalTitle[mixFtIndex] = animalName
+					-- printf("MixFillType: Animal=%s Group=%s Mixture=%s", animalName, foodGroup.title, mixFt.title)
+				end
+				
+				local found = false
+				for _, ingredient in pairs(g_currentMission.animalFoodSystem.mixtureFillTypeIndexToMixture[mixFtIndex].ingredients) do
+					local weight = ingredient.weight
+					for _, ftIndex in pairs(ingredient.fillTypes) do
+						if foodGroupFillTypes[ftIndex] ~= nil and not found then
+							local mixFillTypeTitle = string.format("%s (%.0f%%)", mixFt.title, weight*100)
+							found = true
+
+							if string.find(mixFt.name, "FORAGE") ~= nil then
+								-- insert at end
+								table.insert(item.fillTypes, mixFt)
+								table.insert(item.fillTypesTitle, mixFillTypeTitle)
+							else
+								-- insert direct after direct fill types
+								table.insert(item.fillTypes, lastDirectFillTypePos+1, mixFt)
+								table.insert(item.fillTypesTitle, lastDirectFillTypePos+1, mixFillTypeTitle)
+							end
+						end
+					end
+				end
+			end
+		end
+
+		-- create foodTypesLine for overview table
+		-- local foodTypesLine = ""
+		for index, ftTitle in pairs(item.fillTypesTitle) do
+			if string.sub(ftTitle, 1, -3) ~= "SLIDER" then
+				item.foodTypesLine = item.foodTypesLine .. (item.foodTypesLine == "" and "" or ", ") .. ftTitle
+			end
+		end
+		table.insert(foodGroupItemsRet, item)
+	end
 end
 
 
