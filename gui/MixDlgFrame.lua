@@ -65,22 +65,6 @@ function MixDlgFrame:InitData(mixFillTypeIdxToAnimalTitle)
 	-- Fill data structure
 	self.mixtureRecipesTableData = {}
 	
-	--[[g_currentMission.animalFoodSystem.animalFood{}
-		- consumptionType --> 1 = sequential 2=parallel
-		- animalTypeIndex --> 1-5 (AnimalType.HORSE,PIG,COW,SHEEP,CHICKEN)
-		- groups{}
-			- title
-			- productionWeight
-			- eatWeight
-			- fillTypes{}
-	]]
-	local animalNames = {}
-	animalNames[AnimalType.HORSE]=g_i18n:getText("txt_horse")
-	animalNames[AnimalType.PIG]=g_i18n:getText("txt_pig")
-	animalNames[AnimalType.COW]=g_i18n:getText("txt_cow")
-	animalNames[AnimalType.SHEEP]=g_i18n:getText("txt_sheep")
-	animalNames[AnimalType.CHICKEN]=g_i18n:getText("txt_chicken")
-
 	for idx, recipe in pairs(g_currentMission.animalFoodSystem.recipes) do
 		local recipeData = {}
 		recipeData.recipeFillType = recipe.fillType
