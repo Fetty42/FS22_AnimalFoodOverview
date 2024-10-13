@@ -1,14 +1,20 @@
-<modDesc descVersion="79">
+<modDesc descVersion="80">
 	<author>Fetty42</author>
-	<version>1.1.2.0</version>
+	<version>1.1.3.0</version>
 	<title>
         <en>AnimalFoodOverview</en>
 		<de>Tierfutter Übersicht</de>
 		<fr>Tableau Alimentation Animale</fr>
+        <it>Panoramica Degli Alimenti Per Animali</it>
     </title>
     <description>
-        <de><![CDATA[Spätestens mit MaizePlus ist es nicht mehr so ganz einfach zu wissen, welche Futterarten in den jeweiligen Futtergruppen enthalten sind. 
+        <de><![CDATA[Spätestens mit MaizePlus ist es nicht mehr so ganz einfach zu wissen, welche Futterarten in den jeweiligen Futtergruppen enthalten sind.
 Mit diesem MOD kann man sich pro Tierart die jeweiligen Futtergruppen und die darin enthaltenen Futterarten anzeigen lassen.
+
+Update 1.1.3.0
+- TerraLifePlus Kompatibilität (aktuelle GUI ist noch nicht optimal für die große Anzahl an Tier- und Futterarten die TerraLifePlus mitbringt)
+- Italienische Übersetzung (Dank an FirenzeIT)
+- kleinere GUI Anpassungen
 
 Update 1.1.2.0
 - kleine Codekorrekturen
@@ -24,8 +30,13 @@ Update 1.1.0.0
 - Futterarten Anzeige um die jeweiligen Mixturen ergänzt
 
 Für Fehlermeldungen oder Anregungen besucht bitte: https://github.com/Fetty42/FS22_AnimalFoodOverview]]></de>
-		<en><![CDATA[With MaizePlus at the latest, it is no longer so easy to know which food types are contained in the respective food groups. 
+		<en><![CDATA[With MaizePlus at the latest, it is no longer so easy to know which food types are contained in the respective food groups.
 With this MOD you can display the respective food groups and the food types contained in them per animal species.
+
+Update 1.1.3.0
+- TerraLifePlus compatibility (current GUI is not yet optimal for the large number of animal and food types that TerraLifePlus brings)
+- Italian translation (thanks to FirenzeIT)
+- minor GUI adjustments
 
 Update 1.1.2.0
 - small code corrections
@@ -41,8 +52,13 @@ Update 1.1.0.0
 - Food types display supplemented by the respective mixtures
 
 For error messages or suggestions please visit: https://github.com/Fetty42/FS22_AnimalFoodOverview]]></en>
-		<fr><![CDATA[Avec MaizePlus activé, il n'est plus aussi facile de savoir quels types d'aliments sont contenus dans les différents groupes alimentaires. 
+		<fr><![CDATA[Avec MaizePlus activé, il n'est plus aussi facile de savoir quels types d'aliments sont contenus dans les différents groupes alimentaires.
 Avec ce MOD, vous pouvez afficher les différents groupes d'aliments et les types d'aliments qu'ils contiennent par espèce animale.
+
+Mise à jour 1.1.3.0
+- Compatibilité TerraLifePlus (l'interface graphique actuelle n'est pas encore optimale pour le grand nombre d'espèces animales et d'aliments que TerraLifePlus apporte)
+- traduction italienne (merci à FirenzeIT)
+- petites adaptations de l'interface graphique
 
 Mise à jour 1.1.2.0
 - petites corrections de code
@@ -58,13 +74,35 @@ Mise à jour 1.1.0.0
 - Affichage des types d'aliments complété par les mélanges respectifs
 
 Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github.com/Fetty42/FS22_AnimalFoodOverview]]></fr>
+        <it><![CDATA[Con MaizePlus, non è più così facile sapere quali tipi di alimenti sono contenuti nei rispettivi gruppi alimentari. 
+Con questo MOD puoi visualizzare i rispettivi gruppi alimentari e i tipi di alimenti contenuti in essi per ogni specie animale.
+
+Aggiornamento 1.1.3.0
+- Compatibilità con TerraLifePlus (l'attuale interfaccia grafica non è ancora ottimale per il gran numero di specie animali e alimentari che TerraLifePlus porta con sé)
+- traduzione italiana (grazie a FirenzeIT)
+- piccoli aggiustamenti dell'interfaccia grafica
+
+Aggiornamento 1.1.2.0
+- piccole correzioni al codice
+- risolto il problema per cui in rari casi i pulsanti di azione non erano disponibili
+- aggiunta la traduzione CZ (grazie a janse1984)
+
+Aggiornamento 1.1.1.0
+- Correzione delle intestazioni di colonna invisibili
+- correzione per gli animali non standard per non mostrare "nil" nel dialogo (grazie Achimobil)
+
+Aggiornamento 1.1.0.0
+- Dialogo separato per la visualizzazione di tutte le ricette di miscele
+- Visualizzazione dei tipi di alimenti integrata dalle rispettive miscele
+
+Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/FS22_AnimalFoodOverview]]></it>
     </description>
 	
 	<iconFilename>icon_AnimalFoodOverview.dds</iconFilename>
 	<multiplayer supported="true" />
 	<extraSourceFiles>
 		<sourceFile filename="AnimalFoodOverview.lua" />
-	</extraSourceFiles>    
+	</extraSourceFiles>
 	<actions>
       	<action name="ShowAnimalFoodDlg" category="SYSTEM" />
   	</actions>	
@@ -80,6 +118,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Обзор кормов</ru>
 			<cz>Zobrazit přehled krmiva pro zvířata</cz>
 			<fr>Affichage du tableau d'alimentation animale</fr>
+            <it>Mostra Panoramica degli Alimenti per Animali</it>
 		</text>
 
 	<!-- Dlg -->
@@ -89,6 +128,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Обзор кормов для животных</ru>
 			<cz>Přehled krmiv pro zvířata</cz>
 			<fr>Tableau Alimentation Animale</fr>
+        	<it>Panoramica dell'Alimentazione Animale</it>
 		</text>		
         <text name="ui_animalFoodDlg_header_FoodGroup">
 			<de>Futtergruppen</de>	
@@ -96,6 +136,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Группа кормов</ru>
 			<cz>Skupiny potravin</cz>
 			<fr>Groupe alimentaire</fr>
+        	<it>Gruppo Alimentare</it>
         </text>		
         <text name="ui_animalFoodDlg_header_ProductionWeight">
 			<de>Prod.-Gew.</de>	
@@ -103,6 +144,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Удел. вес</ru>
 			<cz>Prod. Hmotn.</cz>
 			<fr>Ratio Prod</fr>
+       		<it>Peso Prod.</it>
         </text>		
         <text name="ui_animalFoodDlg_header_EatWeight">
 			<de>Fress-Gew.</de>
@@ -110,6 +152,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Корм. вес</ru>
 			<cz>Hmotnost</cz>
 			<fr>Ratio Alim.</fr>
+        	<it>Peso Alim.</it>
         </text>		
         <text name="ui_animalFoodDlg_header_FoodTypes">
 			<de>Futtersorten</de>
@@ -117,6 +160,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Типы кормов</ru>
 			<cz>Typy potravin</cz>
 			<fr>Types Aliments</fr>
+        	<it>Tipi di Alimenti</it>
         </text>		
         <text name="ui_animalFoodDlg_btnClose">
 			<de>Schließen</de>	
@@ -124,6 +168,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Закрыть</ru>
 			<cz>Zavřít</cz>
 			<fr>Fermer</fr>
+        	<it>Chiudi</it>
 		</text>		
         <text name="ui_animalFoodDlg_btnMix">
 			<de>Mixtur-Rezepte anzeigen</de>	
@@ -131,6 +176,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Показать рецепты смесей</ru>
 			<cz>Zobrazit recepty na směsi</cz>
 			<fr>Afficher Recettes Rations</fr>
+        	<it>Mostra Ricette delle Miscele</it>
 		</text>		
         <text name="ui_animalFoodDlg_sidebar_title">
 			<de>Alle Futterarten</de>
@@ -138,6 +184,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Все типы кормов</ru>
 			<cz>Všechny typy potravin</cz>
 			<fr>Types Aliments (Tous)</fr>
+        	<it>Tutti i Tipi di Alimenti</it>
 		</text>		
 	<!-- Dlg mixtures-->
         <text name="ui_mixturesDlg_title">
@@ -146,6 +193,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Обзор рецептов смесей</ru>
 			<cz>Přehled receptů na směsi</cz>
 			<fr>Synthèse Recettes Rations</fr>
+        	<it>Panoramica delle Ricette delle Miscele</it>
 		</text>		
         <text name="ui_mixturesDlg_header_IngredientTitle">
 			<de>Bestandteil</de>
@@ -153,6 +201,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Компонент</ru>
 			<cz>Přísady</cz>
 			<fr>Ingrédient</fr>
+        	<it>Ingrediente</it>
         </text>		
         <text name="ui_mixturesDlg_header_Min">
 			<de>Min.</de>
@@ -160,6 +209,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Мин.</ru>
 			<cz>Min.</cz>
 			<fr>Min.</fr>
+        	<it>Min.</it>
         </text>		
         <text name="ui_mixturesDlg_header_Max">
 			<de>Max.</de>
@@ -167,6 +217,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Макс.</ru>
 			<cz>Max.</cz>
 			<fr>Max.</fr>
+        	<it>Max.</it>
         </text>		
         <text name="ui_mixturesDlg_header_FillTypeTitles">
 			<de>Mögliche Futterarten</de>
@@ -174,6 +225,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Возможные типы кормов</ru>
 			<cz>Možné druhy píce</cz>
 			<fr>Types Fourrages</fr>
+        	<it>Tipi di Foraggi Possibili</it>
         </text>		
 	<!-- Text -->
         <text name="txt_Parallel">
@@ -182,6 +234,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>паралельный</ru>
 			<cz>soubežné</cz>
 			<fr>Parallèle</fr>
+        	<it>parallelo</it>
         </text>		
         <text name="txt_sequentiel">
 			<de>sequentiell</de>
@@ -189,6 +242,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>последовательный</ru>
 			<cz>Sekvenční</cz>
 			<fr>Série</fr>
+        	<it>sequenziale</it>
         </text>		
         <text name="txt_horse">
 			<de>Pferd</de>
@@ -196,6 +250,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Лошади</ru>
 			<cz>Kůň</cz>
 			<fr>Chevaux</fr>
+        	<it>Cavallo</it>
         </text>		
         <text name="txt_pig">
 			<de>Schwein</de>
@@ -203,6 +258,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Свиньи</ru>
 			<cz>Prase</cz>
 			<fr>Cochons</fr>
+        	<it>Maiale</it>
         </text>		
         <text name="txt_cow">
 			<de>Kuh</de>
@@ -210,6 +266,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Коровы</ru>
 			<cz>Kráva</cz>
 			<fr>Vaches</fr>
+        	<it>Mucca</it>
         </text>		
         <text name="txt_sheep">
 			<de>Schaf</de>
@@ -217,6 +274,7 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Овцы</ru>
 			<cz>Ovce</cz>
 			<fr>Moutons</fr>
+        	<it>Pecora</it>
         </text>		
         <text name="txt_chicken">
 			<de>Huhn</de>
@@ -224,6 +282,23 @@ Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github
 			<ru>Куры</ru>
 			<cz>Kuře</cz>
 			<fr>Volailles</fr>
+			<it>Pollo</it>
+        </text>		
+        <text name="txt_goat">
+			<de>Ziege</de>
+			<en>Goat</en>
+			<ru>Коза</ru>
+			<cz>Kozí</cz>
+			<fr>Chèvre</fr>
+			<it>Capra</it>
+        </text>		
+        <text name="txt_haycow">
+			<de>Heukuh</de>
+			<en>Haycow</en>
+			<ru>Корова на сене</ru>
+			<cz>Kráva na seno</cz>
+			<fr>Vache à foin</fr>
+			<it>Mucca da fieno</it>
         </text>		
 
 	</l10n>

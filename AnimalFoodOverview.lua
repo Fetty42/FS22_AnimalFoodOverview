@@ -1,6 +1,6 @@
 -- Author: Fetty42
--- Date: 29.03.2024
--- Version: 1.1.2.0
+-- Date: 13.10.2024
+-- Version: 1.1.3.0
 
 local dbPrintfOn = false
 local dbInfoPrintfOn = true
@@ -83,52 +83,6 @@ function AnimalFoodOverview:ShowAnimalFoodDlg(actionName, keyStatus, arg3, arg4,
 	-- DebugUtil.printTableRecursively(g_currentMission.animalFoodSystem.animalMixtures, ".", 0, 4)
 	-- print("** End DebugUtil.printTableRecursively() **************************************************************")
 end
-
-
-
-function AnimalFoodOverview:onListSelectionChanged(husbandry, cluster)
-	
-	for _, cluster in pairs(self.selectedHusbandry:getClusters()) do
-		local subTypeIdx = cluster.subTypeIndex
-		local subType = g_currentMission.animalSystem.subTypes[subTypeIdx]
-		local food = subType.input["food"]
-	end
-
---	for _, animalFood in pairs(g_currentMission.animalFoodSystem.animalFood) do
---		local animalType = g_currentMission.animalSystem:getTypeByIndex(animalFood.animalTypeIndex)
---	end
-
-    local animalTypeIndex = self.selectedHusbandry:getAnimalTypeIndex()
-	local foodGroupsData = {}
-	DlgFrame:getFoodGroupsDataForAnimalTypeIndex(animalTypeIndex, foodGroupsData, nil, nil)
-
-	local firstRun = (self.foodGroupElements == nil)
-	if firstRun then
-		self.foodGroupElements = {}
-		for i=1,5 do
-			local element = self.foodHeader:clone()
-			element.textAutoWidth = false
-			element.defaultTextSize = 0.009
-			element.textLayoutMode = TextElement.LAYOUT_MODE.RESIZE
-			-- element.textMaxNumLines = 2
-			self.foodGroupElements[i] = element
-			self.requirementsLayout:addElement(element)
-		end
-    end
-	
-	if self.foodGroupElements ~= nil then
-		for i=1,5 do
-            local text = ""
-            if i <= #foodGroupsData then
-                text = string.format("%s: %s", foodGroupsData[i].groupTitle, foodGroupsData[i].foodTypesLine)
-            end
-            self.foodGroupElements[i]:setText(text)
-        end
-        self.requirementsLayout:invalidateLayout()
-	end
-end
-
-InGameMenuAnimalsFrame.onListSelectionChanged = Utils.appendedFunction(InGameMenuAnimalsFrame.onListSelectionChanged, AnimalFoodOverview.onListSelectionChanged)
 
 
 function AnimalFoodOverview:onLoad(savegame)end;
