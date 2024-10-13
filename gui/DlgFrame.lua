@@ -118,7 +118,7 @@ function DlgFrame:onOpen()
             -- local subTypeFillTypeIndex = animalSubType.fillTypeIndex
             -- subType.visuals[].minAge
             -- subType.visuals[].store.name
-            animalSubTypeName = string.format("%s - %s(> %s)", animalName, DlgFrame:GetVisualAnimalTitleByAge(animalSubType, animalFood.minAge), animalFood.minAge)
+            animalSubTypeName = string.format("%s - %s(>= %s)", animalName, DlgFrame:GetVisualAnimalTitleByAge(animalSubType, animalFood.minAge), animalFood.minAge)
 			animalNameForSection = animalSubTypeName
         end
 
@@ -130,8 +130,13 @@ function DlgFrame:onOpen()
         -- table.insert(section.items, foodGroupItems1)
 
 		table.insert(self.overviewTableData, section)
+
+		-- sort items
+		table.sort(section.items, DlgFrame.CompSectionItems)
 	end
-	
+
+	table.sort(self.overviewTableData, DlgFrame.CompSections)
+
 	-- finilaze dialog
 	self.overviewTable:reloadData()
 	self.overviewTableDetail:reloadData()
@@ -139,6 +144,20 @@ function DlgFrame:onOpen()
 	self:setSoundSuppressed(true)
     FocusManager:setFocus(self.overviewTable)
     self:setSoundSuppressed(false)
+end
+
+
+function DlgFrame.CompSections(a, b)
+	return a.animalName < b.animalName
+end
+
+
+function DlgFrame.CompSectionItems(a, b)
+	if a.productionWeight == b.productionWeight then
+		return a.groupTitle < b.groupTitle
+	else
+		return a.productionWeight > b.productionWeight
+	end
 end
 
 
@@ -220,7 +239,7 @@ function DlgFrame:getFoodGroupsDataForAnimalTypeIndex(animalFood, foodGroupItems
 			end
 		end
 
-		-- order fillTypesInfos
+		-- sort fillTypesInfos
 		table.sort(item.fillTypesInfos, DlgFrame.CompFillTypesInfos)	
 
 		-- create foodTypesInfoLine for overview table
@@ -233,6 +252,20 @@ function DlgFrame:getFoodGroupsDataForAnimalTypeIndex(animalFood, foodGroupItems
 		table.insert(foodGroupItemsRet, item)
 	end
 end
+
+function DlgFrame.CompFillTypesInfos(a, b)
+	-- fillTypesInfo: title, fillType, ratio, type
+	if a.order == b.order then
+		if a.ratio == b.ratio then
+			return a.title < b.title
+		else
+			return a.ratio > b.ratio
+		end
+	else
+		return a.order < b.order
+	end
+end
+
 
 
 function DlgFrame:SearchIngredientsList(ingredients, mixFtIndex, item, foodGroupFillTypes, animalTypeIndex)
@@ -305,17 +338,6 @@ function DlgFrame:SearchIngredientsList(ingredients, mixFtIndex, item, foodGroup
 				end
 			end
 		end
-	end
-end
-
-
-
-function DlgFrame.CompFillTypesInfos(a, b)
-	-- fillTypesInfo: title, fillType, ratio, type
-	if a.order == b.order then
-		return a.ratio > b.ratio
-	else
-		return a.order < b.order
 	end
 end
 
