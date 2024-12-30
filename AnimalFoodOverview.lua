@@ -1,6 +1,6 @@
 -- Author: Fetty42
--- Date: 13.10.2024
--- Version: 1.1.3.0
+-- Date: 20.10.2024
+-- Version: 1.1.4.0
 
 local dbPrintfOn = false
 local dbInfoPrintfOn = true
@@ -82,6 +82,26 @@ function AnimalFoodOverview:ShowAnimalFoodDlg(actionName, keyStatus, arg3, arg4,
 	-- printf("==> %s", "g_currentMission.animalFoodSystem.animalMixtures")
 	-- DebugUtil.printTableRecursively(g_currentMission.animalFoodSystem.animalMixtures, ".", 0, 4)
 	-- print("** End DebugUtil.printTableRecursively() **************************************************************")
+end
+
+function AnimalFoodOverview:isTerraLife()
+	local mapDirectory = g_mpLoadingScreen.missionInfo.map.baseDirectory
+	if mapDirectory == "" then
+		--wenn mapDirectory leer ist, handelt es sich um die Basemaps
+		return false
+	elseif fileExists(mapDirectory .. "dlcDesc.xml") then
+		--wenn dlcDesc existiert, handelt es sich um DLC-Map
+		return false
+	else
+		local path = mapDirectory .. "modDesc.xml"
+		local xmlFile = XMLFile.load("TempDesc", path)
+		if xmlFile:hasProperty("moddesc.terraLife") then
+			return true
+		else
+			return false
+		end
+		xmlFile:delete()
+	end
 end
 
 

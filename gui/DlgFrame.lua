@@ -1,6 +1,6 @@
 -- Author: Fetty42
--- Date: 13.10.2024
--- Version: 1.1.3.0
+-- Date: 20.10.2024
+-- Version: 1.1.4.0
 
 
 local dbPrintfOn = false
@@ -71,7 +71,7 @@ function DlgFrame:onOpen()
     -- Besonderheiten TerraLifePlus
         --  Futter variiert pro SubType und Alter
         --  Converter für MIX-Ersetzung
-    local isTerraLifePlus = g_modManager:getModByName("FS22_TerraLifePlus") ~= nil and g_modIsLoaded["FS22_TerraLifePlus"]
+    local isTerraLifePlus = g_modManager:getModByName("FS22_TerraLifePlus") ~= nil and g_modIsLoaded["FS22_TerraLifePlus"] and AnimalFoodOverview:isTerraLife()
 
 	-- Fill data structure
 	self.overviewTableData = {}
@@ -111,9 +111,8 @@ function DlgFrame:onOpen()
 		local animalNameForSection = animalName
 
 		local animalSubTypeName = ""
-		if isTerraLifePlus then
+		if isTerraLifePlus and animalFood.minAge ~= nil and animalFood.animalSubTypeIndex ~= nil then
             -- Name über Subtype und Alter ermitteln
-            -- if animalFood.animalSubTypeIndex ~= nil and animalFood.minAge ~= nil then
             local animalSubType = g_currentMission.animalSystem.subTypes[animalFood.animalSubTypeIndex]
             -- local subTypeFillTypeIndex = animalSubType.fillTypeIndex
             -- subType.visuals[].minAge
@@ -202,7 +201,7 @@ end
 
 
 function DlgFrame:getFoodGroupsDataForAnimalTypeIndex(animalFood, foodGroupItemsRet, animalName)
-	local isTerraLifePlus = g_modManager:getModByName("FS22_TerraLifePlus") ~= nil and g_modIsLoaded["FS22_TerraLifePlus"]
+    local isTerraLifePlus = g_modManager:getModByName("FS22_TerraLifePlus") ~= nil and g_modIsLoaded["FS22_TerraLifePlus"] and AnimalFoodOverview:isTerraLife()
 
 	-- Collect allowed filltypes for each food group
 	for _, foodGroup in pairs(animalFood.groups) do
@@ -223,7 +222,7 @@ function DlgFrame:getFoodGroupsDataForAnimalTypeIndex(animalFood, foodGroupItems
 
 		-- mixture fill types
 		dbPrintf("Mixtures: Animal=%s Group=%s", animalName, foodGroup.title)
-		if isTerraLifePlus then
+		if isTerraLifePlus and g_currentMission.animalFoodSystem.animalTypesIndexToMixtures ~= nil then
 			-- With TerraLifePlus
 			if g_currentMission.animalFoodSystem.animalTypesIndexToMixtures[animalFood.animalTypeIndex] ~= nil then
 				for mixFtIndex, ingredients in pairs(g_currentMission.animalFoodSystem.animalTypesIndexToMixtures[animalFood.animalTypeIndex]) do

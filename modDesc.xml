@@ -1,6 +1,6 @@
 <modDesc descVersion="80">
 	<author>Fetty42</author>
-	<version>1.1.3.0</version>
+	<version>1.1.4.0</version>
 	<title>
         <en>AnimalFoodOverview</en>
 		<de>Tierfutter Übersicht</de>
@@ -10,6 +10,11 @@
     <description>
         <de><![CDATA[Spätestens mit MaizePlus ist es nicht mehr so ganz einfach zu wissen, welche Futterarten in den jeweiligen Futtergruppen enthalten sind.
 Mit diesem MOD kann man sich pro Tierart die jeweiligen Futtergruppen und die darin enthaltenen Futterarten anzeigen lassen.
+
+Für Fehlermeldungen oder Anregungen besucht bitte: https://github.com/Fetty42/FS22_AnimalFoodOverview oder https://forum.giants-software.com/viewtopic.php?t=208708
+
+Update 1.1.4.0
+- TerraLifePlus-MOD Erkennung verbessert
 
 Update 1.1.3.0
 - TerraLifePlus Kompatibilität (aktuelle GUI ist noch nicht optimal für die große Anzahl an Tier- und Futterarten die TerraLifePlus mitbringt)
@@ -27,11 +32,14 @@ Update 1.1.1.0
 
 Update 1.1.0.0
 - Separater Dialog für die Anzeige aller Mixtur-Rezepte
-- Futterarten Anzeige um die jeweiligen Mixturen ergänzt
-
-Für Fehlermeldungen oder Anregungen besucht bitte: https://github.com/Fetty42/FS22_AnimalFoodOverview]]></de>
+- Futterarten Anzeige um die jeweiligen Mixturen ergänzt]]></de>
 		<en><![CDATA[With MaizePlus at the latest, it is no longer so easy to know which food types are contained in the respective food groups.
 With this MOD you can display the respective food groups and the food types contained in them per animal species.
+
+For error messages or suggestions please visit: https://github.com/Fetty42/FS22_AnimalFoodOverview or https://forum.giants-software.com/viewtopic.php?t=208708
+
+Update 1.1.4.0
+- TerraLifePlus-MOD detection improved
 
 Update 1.1.3.0
 - TerraLifePlus compatibility (current GUI is not yet optimal for the large number of animal and food types that TerraLifePlus brings)
@@ -49,11 +57,14 @@ Update 1.1.1.0
 
 Update 1.1.0.0
 - Separate dialog for the display of all mixture recipes
-- Food types display supplemented by the respective mixtures
-
-For error messages or suggestions please visit: https://github.com/Fetty42/FS22_AnimalFoodOverview]]></en>
+- Food types display supplemented by the respective mixtures]]></en>
 		<fr><![CDATA[Avec MaizePlus activé, il n'est plus aussi facile de savoir quels types d'aliments sont contenus dans les différents groupes alimentaires.
 Avec ce MOD, vous pouvez afficher les différents groupes d'aliments et les types d'aliments qu'ils contiennent par espèce animale.
+
+Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github.com/Fetty42/FS22_AnimalFoodOverview ou https://forum.giants-software.com/viewtopic.php?t=208708
+ 
+Mise à jour 1.1.4.0
+- Amélioration de la reconnaissance du MOD TerraLifePlus
 
 Mise à jour 1.1.3.0
 - Compatibilité TerraLifePlus (l'interface graphique actuelle n'est pas encore optimale pour le grand nombre d'espèces animales et d'aliments que TerraLifePlus apporte)
@@ -71,11 +82,14 @@ Mise à jour 1.1.1.0
 
 Mise à jour 1.1.0.0
 - Dialogue séparé pour l'affichage de toutes les recettes de mélange
-- Affichage des types d'aliments complété par les mélanges respectifs
-
-Pour les messages d'erreur ou les suggestions, veuillez visiter : https://github.com/Fetty42/FS22_AnimalFoodOverview]]></fr>
+- Affichage des types d'aliments complété par les mélanges respectifs]]></fr>
         <it><![CDATA[Con MaizePlus, non è più così facile sapere quali tipi di alimenti sono contenuti nei rispettivi gruppi alimentari. 
 Con questo MOD puoi visualizzare i rispettivi gruppi alimentari e i tipi di alimenti contenuti in essi per ogni specie animale.
+
+Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/FS22_AnimalFoodOverview o https://forum.giants-software.com/viewtopic.php?t=208708
+
+Aggiornamento 1.1.4.0
+- Migliorato il rilevamento di TerraLifePlus-MOD
 
 Aggiornamento 1.1.3.0
 - Compatibilità con TerraLifePlus (l'attuale interfaccia grafica non è ancora ottimale per il gran numero di specie animali e alimentari che TerraLifePlus porta con sé)
@@ -93,9 +107,7 @@ Aggiornamento 1.1.1.0
 
 Aggiornamento 1.1.0.0
 - Dialogo separato per la visualizzazione di tutte le ricette di miscele
-- Visualizzazione dei tipi di alimenti integrata dalle rispettive miscele
-
-Per segnalazioni di errori o suggerimenti visitare: https://github.com/Fetty42/FS22_AnimalFoodOverview]]></it>
+- Visualizzazione dei tipi di alimenti integrata dalle rispettive miscele]]></it>
     </description>
 	
 	<iconFilename>icon_AnimalFoodOverview.dds</iconFilename>
